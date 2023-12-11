@@ -1,0 +1,41 @@
+<!--Creating the Page Header-->
+
+<div class="header-div text-center py-5 rounded-2 h-20 d-flex align-items-center justify-content-center">
+    <h1 class="display-6 fw-bold">Payment Details App</h1>
+</div>
+
+
+<div class="h-100 d-flex ">
+    <div class="col-6 m-4">
+        <app-payment-detail-form/>
+    </div>
+    <div class="col-6 flex-grow-1">
+       <h3>Here are the Card Details - </h3>
+       <table class="table table-responsive">
+        <thead class="thead-dark">
+          <tr>
+           
+            <th scope="col" class="">Card Owner Name</th>
+            <th scope="col">Card Number</th>
+            
+           
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pd of service.list"  (click)="populateForm(pd)" class="mouse-hover">
+            
+            <td>{{pd.cardOwnerName}} <i class="fa-solid fa-file-pen  mouse-hover " (click)="populateForm(pd)"></i></td>
+            <td>{{pd.cardNumber}}</td>
+            
+            
+            
+            <td><i class="fa-solid fa-trash fa-lg mouse-hover" (click)="onDelete(pd.id)"></i></td>
+          </tr>
+          
+        </tbody>
+        
+      </table>
+      
+    </div>
+</div>

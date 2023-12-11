@@ -1,0 +1,20 @@
+.header-div {
+    background-color: #ffbd77;
+background-image: linear-gradient(319deg, #ffbd77 0%, #f0f4a4 37%, #acfcd9 100%);
+
+
+}
+
+body {
+    height: 100%
+  }
+
+table {
+    border: gray 2px solid;
+}
+
+table th {
+   background-color: rgb(165, 206, 206);
+   
+}
+
